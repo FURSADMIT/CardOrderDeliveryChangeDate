@@ -45,8 +45,6 @@ public class CardOrderDeliveryChangeDateTest {
         $("[data-test-id='success-notification']").shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.text("Встреча успешно запланирована на " + secondMeetingDate))
                 .shouldBe(visible, Duration.ofSeconds(15));
-
-
     }
 }
 
