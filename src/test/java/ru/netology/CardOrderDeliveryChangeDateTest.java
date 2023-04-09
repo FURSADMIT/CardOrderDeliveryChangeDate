@@ -42,9 +42,11 @@ public class CardOrderDeliveryChangeDateTest {
         $x(".//div [contains(text(), 'У вас уже запланирована встреча на другую дату. Перепланировать?')]")
                 .shouldBe(visible);
         $x(".//span[contains(text(), 'Перепланировать')]").click();
-        $("[data-test-id='success-notification']").shouldBe(visible, Duration.ofSeconds(15))
+        $("[data-test-id='success-notification']").shouldBe(visible)
                 .shouldHave(Condition.text("Встреча успешно запланирована на " + secondMeetingDate))
-                .shouldBe(visible, Duration.ofSeconds(15));
+                .shouldBe(visible);
+
+
     }
 }
 
